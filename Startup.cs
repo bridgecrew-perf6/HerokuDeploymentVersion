@@ -95,6 +95,8 @@ namespace BackApp.API
             }
             else
             {
+                // adding this line temporarly just to check the error occured in production
+                app.UseDeveloperExceptionPage();
                 // Global Error intercepter
                 app.UseExceptionHandler(builder => {
                     builder.Run(async context => {
