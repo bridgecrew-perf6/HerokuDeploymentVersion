@@ -98,7 +98,7 @@ namespace BackApp.API
                 // adding this line temporarly just to check the error occured in production
                 app.UseDeveloperExceptionPage();
                 // Global Error intercepter
-                app.UseExceptionHandler(builder => {
+                /*app.UseExceptionHandler(builder => {
                     builder.Run(async context => {
                         context.Response.StatusCode=(int)HttpStatusCode.InternalServerError;
 
@@ -110,7 +110,7 @@ namespace BackApp.API
                             await context.Response.WriteAsync(error.Error.Message);
                         }
                     });
-                });
+                });*/
             }
             app.UseRouting();
             
